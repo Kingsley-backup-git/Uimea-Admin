@@ -53,9 +53,9 @@ export default function NewsListingPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {isSuccess &&
-            data?.map((item) => (
+            data?.map((item: { id?: string; _id: string; imageurl: string; title: string; description: string; eventdate: string }) => (
               <div
-                key={item.id}
+                key={item._id}
                 className="bg-card rounded-lg shadow-lg border border-border overflow-hidden hover:shadow-xl transition-shadow"
               >
                 <div className="aspect-video overflow-hidden">
