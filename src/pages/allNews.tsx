@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
+
 import { NewsService } from "../services/newsService";
 import useNews from "../hooks/useNews";
 import { useNavigate } from "react-router-dom";
@@ -23,7 +23,7 @@ export default function NewsListingPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-6xl mx-auto p-6">
+      <div className="max-w-6xl mx-auto md:p-6 p-2">
         <div className="mb-4 md:hidden">
           <button
             type="button"

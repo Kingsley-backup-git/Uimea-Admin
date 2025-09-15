@@ -8,13 +8,13 @@ export default function AdminLayout() {
     Cookies.remove("token")
     navigate("/")
   }
-  const handleBack = () => {
-    if (window.history.length > 1) {
-      navigate(-1)
-    } else {
-      navigate("/dashboard")
-    }
-  }
+  // const handleBack = () => {
+  //   if (window.history.length > 1) {
+  //     navigate(-1)
+  //   } else {
+  //     navigate("/dashboard")
+  //   }
+  // }
 
   return (
     <div className="min-h-screen bg-background text-foreground flex">
@@ -58,25 +58,32 @@ export default function AdminLayout() {
       <div className="flex-1 flex flex-col">
         <header className="h-16 border-b border-border bg-card/50 backdrop-blur flex items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2 md:hidden">
-            <button
+            {/* <button
               onClick={handleBack}
               aria-label="Go back"
               className="inline-flex items-center justify-center w-9 h-9 rounded-md border border-border bg-card text-foreground hover:bg-muted transition-colors"
-            >
-              <span className="sr-only">Back</span>
+            > */}
+              {/* <span className="sr-only">Back</span> */}
               {/* simple chevron */}
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              {/* <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
-            </button>
+              </svg> */}
+            {/* </button> */}
             <Link to="/dashboard" className="text-base font-semibold">UIMEA Admin</Link>
           </div>
           <div className="flex items-center gap-3">
-            <Link to="/add-news" className="px-3 py-1.5 text-sm rounded-md bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors">
+            {/* <Link to="/add-news" className="px-3 py-1.5 text-sm rounded-md bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors">
               New News
-            </Link>
+            </Link> */}
             <button onClick={handleLogout} className="hidden md:inline-flex px-3 py-1.5 text-sm rounded-md bg-secondary text-secondary-foreground hover:bg-muted transition-colors">
               Logout
+            </button>
+            <button onClick={handleLogout} className="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-md border border-border bg-card text-foreground hover:bg-muted transition-colors" aria-label="Logout">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                <polyline points="16 17 21 12 16 7" />
+                <line x1="21" y1="12" x2="9" y2="12" />
+              </svg>
             </button>
           </div>
         </header>

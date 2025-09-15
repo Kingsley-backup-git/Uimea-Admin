@@ -84,7 +84,7 @@ await doAddNews(formdata)
 
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
+    <div className="min-h-screen bg-background flex items-center justify-center md:p-4">
       <div className="w-full max-w-2xl">
         <div className="mb-4 md:hidden">
           <button
@@ -104,7 +104,7 @@ await doAddNews(formdata)
             <span className="text-sm">Back</span>
           </button>
         </div>
-        <div className="bg-card rounded-lg shadow-lg border border-border p-8">
+        <div className="bg-card rounded-lg shadow-lg border border-border md:p-8 p-2">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-black text-foreground mb-2 font-sans">Create News Article</h1>
             <p className="text-muted text-balance">Fill in the details to publish your news article</p>
